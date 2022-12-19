@@ -27,7 +27,7 @@ export default function App() {
             component={Home}
             options={{
               title: "",
-              // headerStyle: { backgroundColor:'#000'},
+              headerTransparent: true,
               // headerTitleStyle: { color: '#fff'}
             }}
           />
