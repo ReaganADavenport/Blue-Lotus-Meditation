@@ -10,11 +10,24 @@ export default function Home(){
 
     return(
         <View style={globalStyles.homeContainer}>
-            <Image style={globalStyles.wavyTopImage} source={wavyTop}/>
-            <Text style={globalStyles.titleText}>Welcome to</Text>
-            <Image style={globalStyles.logoImage} source={logo}/>
+            <View style={globalStyles.wavyBlockTop}>
+                <Image style={globalStyles.wavyTopImage} source={wavyTop}/>
+            </View>
+
+            <View style={globalStyles.titleBlock}>
+                <Text style={globalStyles.titleText}>Welcome to</Text>
+            </View>
+
+            <View style={globalStyles.logoBlock}>
+                <Image style={globalStyles.logoImage} source={logo}/>
+            </View>
+
             <Button title='Get Started'/>
-            <Image style={globalStyles.wavyBottomImage} source={wavyBottom}/>
+
+            <View style={globalStyles.wavyBlockBottom}>
+                <Image style={globalStyles.wavyBottomImage} source={wavyBottom}/>
+            </View>
+            
         </View>
     )
 }

@@ -6,26 +6,42 @@ export const globalStyles = StyleSheet.create({
         fontFamily: 'vesper-regular',
         backgroundColor: '#226170',
         flex: 1,
-        padding: 45,
+        padding: 0,
+    },
+
+    titleBlock:{
+        alignContent: 'center',
+        paddingLeft: 115,
     },
 
     titleText:{
-        alignContent: 'center',
         fontFamily: 'vesper-bold',
         fontSize: 28,
         color: '#fffee7',
     },
 
+    logoBlock:{
+        paddingLeft: 30,
+        paddingTop: 20,
+    },
+
     logoImage:{
-        paddingLeft: 300,
         height: 200,
         width: 320,
     },
 
+    wavyBlockTop:{
+        paddingLeft: 80,
+    },
+
     wavyTopImage:{
         height: 200,
-        paddingLeft: 400,
         width: 320,
+    },
+
+
+    wavyBlockBottom:{
+        paddingTop: 150,
     },
 
     wavyBottomImage:{
