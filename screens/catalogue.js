@@ -2,7 +2,6 @@ import React from 'react';
 import { Text, View, Button, TouchableOpacity, Image} from 'react-native';
 import { globalStyles } from '../styles/global';
 
-import logo from '../assets/Blue-Lotus-logo-text.png';
 import wavyTop from '../assets/wavyLines-top.png';
 import wavyBottom from '../assets/wavyLines-bottom.png';
 

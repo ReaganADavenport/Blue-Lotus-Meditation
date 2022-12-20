@@ -75,5 +75,14 @@ export const globalStyles = StyleSheet.create({
     paragraph: {
         marginVertical: 8,
         lineHeight: 20,
+    },
+
+
+    logContainer:{
+        alignContent: 'center',
+        fontFamily: 'vesper-regular',
+        backgroundColor: '#5faea5',
+        flex: 1,
+        padding: 0,
     }
 })

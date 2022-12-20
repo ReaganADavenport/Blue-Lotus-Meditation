@@ -6,7 +6,7 @@ import logo from '../assets/Blue-Lotus-logo-text.png';
 import wavyTop from '../assets/wavyLines-top.png';
 import wavyBottom from '../assets/wavyLines-bottom.png';
 
-export default function Home(){
+export default function Home({navigation}){
 
     return(
         <View style={globalStyles.homeContainer}>
@@ -26,6 +26,7 @@ export default function Home(){
             <View style={globalStyles.buttonBlock}>
                 <TouchableOpacity 
                     style={globalStyles.button}
+                    onPress={() => navigation.navigate("Catalogue")}
                     >
                     <Text style={globalStyles.buttonText}>Get Started</Text>
                 </TouchableOpacity>

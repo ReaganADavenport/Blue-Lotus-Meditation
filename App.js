@@ -6,6 +6,7 @@ import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import { NavigationContainer } from '@react-navigation/native';
 
 import Home from './screens/home';
+import Catalogue from './screens/catalogue';
 
 const Stack = createNativeStackNavigator();
 
@@ -31,13 +32,14 @@ export default function App() {
               // headerTitleStyle: { color: '#fff'}
             }}
           />
-          {/* <Stack.Screen
-            name="Review Details"
-            component={ReviewDetails}
+          <Stack.Screen
+            name="Catalogue"
+            component={Catalogue}
             options={{
-              headerStyle: { backgroundColor:'#eee' },
+              title: "",
+              headerTransparent: true,
             }}
-          /> */}
+          />
         </Stack.Navigator>
       </NavigationContainer>
      );
