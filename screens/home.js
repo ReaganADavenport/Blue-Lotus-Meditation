@@ -22,7 +22,14 @@ export default function Home(){
                 <Image style={globalStyles.logoImage} source={logo}/>
             </View>
 
-            <Button title='Get Started'/>
+
+            <View style={globalStyles.buttonBlock}>
+                <TouchableOpacity 
+                    style={globalStyles.button}
+                    >
+                    <Text style={globalStyles.buttonText}>Get Started</Text>
+                </TouchableOpacity>
+            </View>
 
             <View style={globalStyles.wavyBlockBottom}>
                 <Image style={globalStyles.wavyBottomImage} source={wavyBottom}/>

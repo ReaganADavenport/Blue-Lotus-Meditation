@@ -22,7 +22,7 @@ export const globalStyles = StyleSheet.create({
 
     logoBlock:{
         paddingLeft: 30,
-        paddingTop: 20,
+        paddingTop: 30,
     },
 
     logoImage:{
@@ -39,9 +39,32 @@ export const globalStyles = StyleSheet.create({
         width: 320,
     },
 
+    buttonBlock:{
+        alignContent: 'center',
+        alignSelf: 'center',
+        padding: 50,
+        textAlign: 'center',
+        // paddingLeft: 130,
+    },
+
+    button:{        
+        color: '#000',
+        backgroundColor: '#f7c502',
+        borderRadius: 5,
+        textAlign: 'center',
+        width: 200,
+    },
+
+    buttonText:{
+        fontFamily: 'vesper-bold',
+        fontSize: 24,
+        color: '#fffee7',
+        textAlign:'center',
+    },
+
 
     wavyBlockBottom:{
-        paddingTop: 150,
+        paddingTop: 50,
     },
 
     wavyBottomImage:{
