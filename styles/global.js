@@ -87,10 +87,32 @@ export const globalStyles = StyleSheet.create({
     },
 
     listBlock:{
+        marginHorizontal: 'auto',
+        width: 400,
+    },
+
+    imageBlock: {
         flexDirection: 'row',
     },
 
+    sleepImage:{
+        width: 150,
+        height: 150,
+        resizeMode: 'contain',
+        flexWrap: 'wrap',
+    },
+
+    mindfulImage:{
+        width: 200,
+        height: 400,
+        resizeMode: 'contain',
+        flexWrap: 'wrap',
+    },
+
     meditationImage:{
+        flexDirection: 'row',
+        width: 200,
+        height: 200,
         resizeMode: 'contain',
     },
 })

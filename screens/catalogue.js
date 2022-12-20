@@ -1,9 +1,12 @@
 import React from 'react';
-import { Text, View, Button, TouchableOpacity, Image} from 'react-native';
+import { Text, View, Button, TouchableOpacity, ScrollView, Image, FlatList} from 'react-native';
 import { globalStyles } from '../styles/global';
 
 import wavyTop from '../assets/wavyLines-top.png';
-import sleep from '../assets/images/sleep-logo.png'
+import sleep from '../assets/images/sleep-logo.png';
+import mindful from '../assets/images/mindful-logo.png';
+import relax from '../assets/images/relax-logo.png';
+import reflect from '../assets/images/reflect-logo.png';
 import wavyBottom from '../assets/wavyLines-bottom.png';
 
 export default function Catalogue(){
@@ -19,7 +22,12 @@ export default function Catalogue(){
             </View>
 
             <View style={globalStyles.listBlock}>
-                <Image style={globalStyles.meditationImage} source={sleep}/>
+                <ScrollView style={globalStyles.imageBlock}>
+                    <Image style={globalStyles.sleepImage} source={sleep}/>
+                    <Image style={globalStyles.mindfulImage} source={mindful}/>
+                    <Image style={globalStyles.meditationImage} source={relax}/>
+                    <Image style={globalStyles.meditationImage} source={reflect}/>
+                </ScrollView>
             </View>
 
 
