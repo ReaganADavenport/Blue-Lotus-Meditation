@@ -3,7 +3,7 @@ import { StyleSheet } from "react-native";
 export const globalStyles = StyleSheet.create({
     homeContainer: {
         alignContent: 'center',
-        fontFamily: 'vesper-regular',
+        fontFamily: 'vesper-bold',
         backgroundColor: '#226170',
         flex: 1,
         padding: 0,
@@ -80,9 +80,17 @@ export const globalStyles = StyleSheet.create({
 
     logContainer:{
         alignContent: 'center',
-        fontFamily: 'vesper-regular',
+        fontFamily: 'vesper-bold',
         backgroundColor: '#5faea5',
         flex: 1,
         padding: 0,
-    }
+    },
+
+    listBlock:{
+        flexDirection: 'row',
+    },
+
+    meditationImage:{
+        resizeMode: 'contain',
+    },
 })

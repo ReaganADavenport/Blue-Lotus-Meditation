@@ -3,6 +3,7 @@ import { Text, View, Button, TouchableOpacity, Image} from 'react-native';
 import { globalStyles } from '../styles/global';
 
 import wavyTop from '../assets/wavyLines-top.png';
+import sleep from '../assets/images/sleep-logo.png'
 import wavyBottom from '../assets/wavyLines-bottom.png';
 
 export default function Catalogue(){
@@ -15,6 +16,10 @@ export default function Catalogue(){
 
             <View style={globalStyles.titleBlock}>
                 <Text style={globalStyles.titleText}>Time to Relax</Text>
+            </View>
+
+            <View style={globalStyles.listBlock}>
+                <Image style={globalStyles.meditationImage} source={sleep}/>
             </View>
 
 
