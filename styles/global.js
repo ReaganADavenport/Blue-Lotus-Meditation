@@ -12,6 +12,7 @@ export const globalStyles = StyleSheet.create({
     titleBlock:{
         alignContent: 'center',
         paddingLeft: 115,
+        top: 130,
     },
 
     titleText:{
@@ -23,6 +24,7 @@ export const globalStyles = StyleSheet.create({
     logoBlock:{
         paddingLeft: 30,
         paddingTop: 30,
+        top: 160,
     },
 
     logoImage:{
@@ -36,6 +38,8 @@ export const globalStyles = StyleSheet.create({
 
     wavyTopImage:{
         height: 200,
+        position: 'absolute',
+        left: 80,
         width: 320,
     },
 
@@ -44,7 +48,7 @@ export const globalStyles = StyleSheet.create({
         alignSelf: 'center',
         padding: 50,
         textAlign: 'center',
-        // paddingLeft: 130,
+        top: 170,
     },
 
     button:{        
@@ -65,6 +69,7 @@ export const globalStyles = StyleSheet.create({
 
     wavyBlockBottom:{
         paddingTop: 50,
+        top: 160,
     },
 
     wavyBottomImage:{
@@ -86,33 +91,33 @@ export const globalStyles = StyleSheet.create({
         padding: 0,
     },
 
-    listBlock:{
-        marginHorizontal: 'auto',
-        width: 400,
+    logBlock:{
+        alignContent: 'center',
+        paddingLeft: 115,
+        top: 90,
+    },
+
+    logText:{
+        fontFamily: 'vesper-bold',
+        fontSize: 28,
+        color: '#fffee7',
     },
 
     imageBlock: {
+        flex: 1,
         flexDirection: 'row',
+        flexWrap: 'wrap',
+        justifyContent: 'space-around',
+        paddingLeft: 30,
+        top: 80,
     },
 
-    sleepImage:{
-        width: 150,
-        height: 150,
-        resizeMode: 'contain',
-        flexWrap: 'wrap',
-    },
-
-    mindfulImage:{
-        width: 200,
-        height: 400,
-        resizeMode: 'contain',
-        flexWrap: 'wrap',
-    },
 
     meditationImage:{
         flexDirection: 'row',
-        width: 200,
-        height: 200,
+        width: 150,
+        height: 400,
         resizeMode: 'contain',
+        marginLeft: 20,
     },
 })
