@@ -70,6 +70,7 @@ export const globalStyles = StyleSheet.create({
     wavyBlockBottom:{
         paddingTop: 50,
         top: 160,
+        zIndex: 1,
     },
 
     wavyBottomImage:{
@@ -110,6 +111,7 @@ export const globalStyles = StyleSheet.create({
         justifyContent: 'space-around',
         paddingLeft: 30,
         top: 80,
+        zIndex: 2,
     },
 
 
