@@ -7,6 +7,7 @@ import { NavigationContainer } from '@react-navigation/native';
 
 import Home from './screens/home';
 import Catalogue from './screens/catalogue';
+import Player from './screens/player';
 
 const Stack = createNativeStackNavigator();
 
@@ -35,6 +36,14 @@ export default function App() {
           <Stack.Screen
             name="Catalogue"
             component={Catalogue}
+            options={{
+              title: "",
+              headerTransparent: true,
+            }}
+          />
+          <Stack.Screen
+            name="Player"
+            component={Player}
             options={{
               title: "",
               headerTransparent: true,
