@@ -37,7 +37,7 @@ export default function Catalogue({navigation}){
                     data = {data}
                     numColumns={2}
                     renderItem={({ item }) => (
-                        <TouchableOpacity onPress={() => navigation.navigate("Player")}>
+                        <TouchableOpacity onPress={() => navigation.navigate("Player", {paramKey: item})}>
                             <Image style={globalStyles.meditationImage} source={item.src}/>
                         </TouchableOpacity>
                         

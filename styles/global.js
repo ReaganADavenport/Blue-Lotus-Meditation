@@ -122,4 +122,24 @@ export const globalStyles = StyleSheet.create({
         resizeMode: 'contain',
         marginLeft: 20,
     },
+
+    playerContainer:{
+        alignContent: 'center',
+        backgroundColor: '#fffde6',
+        fontFamily: 'vesper-bold',
+        flex: 1,
+        padding: 0,
+    },
+
+    playerBlock:{
+        alignContent: 'center',
+        top: 130,
+    },
+
+    playerText:{
+        fontFamily: 'vesper-bold',
+        fontSize: 28,
+        color: '#226170',
+        textAlign: 'center',
+    }
 })
