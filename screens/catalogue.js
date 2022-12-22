@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Text, View, Button, TouchableOpacity, ScrollView, Image, FlatList} from 'react-native';
+import { Text, View, TouchableOpacity, Image, FlatList} from 'react-native';
 import { globalStyles } from '../styles/global';
 
 import wavyTop from '../assets/wavyLines-top.png';
@@ -13,7 +13,7 @@ import wavyBottom from '../assets/wavyLines-bottom.png';
 
 
 
-export default function Catalogue(){
+export default function Catalogue({navigation}){
 
     const [data, setData] = useState([
         {title: 'Sleep', src: sleep, key: '1'},
@@ -37,8 +37,10 @@ export default function Catalogue(){
                     data = {data}
                     numColumns={2}
                     renderItem={({ item }) => (
-                        // <Text>{item.title}</Text>
-                        <Image style={globalStyles.meditationImage} source={item.src}/>
+                        <TouchableOpacity onPress={() => navigation.navigate("Player")}>
+                            <Image style={globalStyles.meditationImage} source={item.src}/>
+                        </TouchableOpacity>
+                        
                     )}
                 />
             </View>
