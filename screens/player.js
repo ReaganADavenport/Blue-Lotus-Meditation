@@ -23,24 +23,24 @@ export default function Player({ route }){
             <View style={globalStyles.playerBlock}>
             
                 <TouchableOpacity>
-                    <AntDesign name="banckward" size={40} color="black" />
+                    <AntDesign name="banckward" size={40} color="#3ea0c7" />
                 </TouchableOpacity>
                 
                 {pause ? (
                     <TouchableOpacity onPress={togglePlayPauseBtn}>
-                        <AntDesign name="play" size={40} color="black" />
+                        <AntDesign name="play" size={40} color="#3ea0c7" />
                     </TouchableOpacity>
                 ) :
                 (
                     <TouchableOpacity onPress={togglePlayPauseBtn}>
-                        <AntDesign name="pausecircle" size={40} color="black" />
+                        <AntDesign name="pausecircle" size={40} color="#3ea0c7" />
                     </TouchableOpacity>
                 )
                 }
                 
 
                 <TouchableOpacity>
-                    <AntDesign name="forward" size={40} color="black" />
+                    <AntDesign name="forward" size={40} color="#3ea0c7" />
                 </TouchableOpacity>
                 
                 
