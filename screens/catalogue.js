@@ -16,10 +16,10 @@ import wavyBottom from '../assets/wavyLines-bottom.png';
 export default function Catalogue({navigation}){
 
     const [data, setData] = useState([
-        {title: 'Sleep', src: sleep, key: '1'},
-        {title: 'Mindfulness', src: mindful, key: '2'},
-        {title: 'Relax', src: relax, key: '3'},
-        {title: 'Reflection', src: reflect, key: '4'},
+        {title: 'Sleep', src: sleep, url: require('../assets/audio/sleep.mp3'), key: '1'},
+        {title: 'Mindfulness', src: mindful, url: require('../assets/audio/mindfulness.mp3'), key: '2'},
+        {title: 'Relax', src: relax, url: require('../assets/audio/relax.mp3'), key: '3'},
+        {title: 'Reflection', src: reflect, url: require('../assets/audio/reflection.mp3'), key: '4'},
     ]);
 
     return(

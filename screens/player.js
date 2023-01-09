@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Text, View, Button, TouchableOpacity, Image} from 'react-native';
 import { AntDesign } from '@expo/vector-icons';
 import { globalStyles } from '../styles/global';
@@ -8,6 +8,12 @@ import wavyBottom from '../assets/wavyLines-bottom.png';
 
 export default function Player({ route }){
 
+    const [pause, setPause] = useState(false);
+
+    function togglePlayPauseBtn(){
+        setPause(!pause);
+    };
+
     return(
         <View style={globalStyles.playerContainer}>
             <View style={globalStyles.wavyBlockTop}>
@@ -15,14 +21,32 @@ export default function Player({ route }){
             </View>
 
             <View style={globalStyles.playerBlock}>
-                <Text style={globalStyles.playerText}>Audio Player goes here</Text>
-                <AntDesign name="banckward" size={24} color="black" />
-                <AntDesign name="play" size={24} color="black" />
-                <AntDesign name="pausecircle" size={24} color="black" />
-                <AntDesign name="forward" size={24} color="black" />
-                <Text style={globalStyles.playerText}> { route.params.paramKey.title }</Text>
-            </View>
+            
+                <TouchableOpacity>
+                    <AntDesign name="banckward" size={40} color="black" />
+                </TouchableOpacity>
+                
+                {pause ? (
+                    <TouchableOpacity onPress={togglePlayPauseBtn}>
+                        <AntDesign name="play" size={40} color="black" />
+                    </TouchableOpacity>
+                ) :
+                (
+                    <TouchableOpacity onPress={togglePlayPauseBtn}>
+                        <AntDesign name="pausecircle" size={40} color="black" />
+                    </TouchableOpacity>
+                )
+                }
+                
 
+                <TouchableOpacity>
+                    <AntDesign name="forward" size={40} color="black" />
+                </TouchableOpacity>
+                
+                
+                
+            </View>
+            <Text style={globalStyles.playerText}> { route.params.paramKey.title }</Text>
             <View style={globalStyles.wavyBlockBottom}>
                 <Image style={globalStyles.wavyBottomImage} source={wavyBottom}/>
             </View>

@@ -133,6 +133,10 @@ export const globalStyles = StyleSheet.create({
 
     playerBlock:{
         alignContent: 'center',
+        alignItems: 'center',
+        flexDirection: 'row',
+        justifyContent: 'space-around',
+        margin: 20,
         top: 130,
     },
 
