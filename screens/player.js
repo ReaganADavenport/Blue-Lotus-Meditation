@@ -1,5 +1,6 @@
 import React from 'react';
 import { Text, View, Button, TouchableOpacity, Image} from 'react-native';
+import Slider from 'react-native-slider';
 import { AntDesign } from '@expo/vector-icons';
 import { globalStyles } from '../styles/global';
 
