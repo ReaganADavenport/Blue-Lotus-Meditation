@@ -23,3 +23,5 @@ const mediations = [
         id: "4",
     }
 ]
+
+export default mediations;

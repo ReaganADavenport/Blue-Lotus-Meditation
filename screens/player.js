@@ -1,8 +1,8 @@
 import React from 'react';
 import { Text, View, Button, TouchableOpacity, Image} from 'react-native';
+import { AntDesign } from '@expo/vector-icons';
 import { globalStyles } from '../styles/global';
 
-import logo from '../assets/Blue-Lotus-logo-text.png';
 import wavyTop from '../assets/wavyLines-top.png';
 import wavyBottom from '../assets/wavyLines-bottom.png';
 
@@ -16,6 +16,10 @@ export default function Player({ route }){
 
             <View style={globalStyles.playerBlock}>
                 <Text style={globalStyles.playerText}>Audio Player goes here</Text>
+                <AntDesign name="banckward" size={24} color="black" />
+                <AntDesign name="play" size={24} color="black" />
+                <AntDesign name="pausecircle" size={24} color="black" />
+                <AntDesign name="forward" size={24} color="black" />
                 <Text style={globalStyles.playerText}> { route.params.paramKey.title }</Text>
             </View>
 
