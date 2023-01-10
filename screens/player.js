@@ -1,5 +1,8 @@
 import React, { useState } from 'react';
-import { Text, View, Button, TouchableOpacity, Image} from 'react-native';
+import { Text, View, TouchableOpacity, Image} from 'react-native';
+
+import Video from 'react-native-video';
+
 import { AntDesign } from '@expo/vector-icons';
 import { globalStyles } from '../styles/global';
 
@@ -21,10 +24,6 @@ export default function Player({ route }){
             </View>
 
             <View style={globalStyles.playerBlock}>
-            
-                <TouchableOpacity>
-                    <AntDesign name="banckward" size={40} color="#3ea0c7" />
-                </TouchableOpacity>
                 
                 {pause ? (
                     <TouchableOpacity onPress={togglePlayPauseBtn}>
@@ -39,11 +38,7 @@ export default function Player({ route }){
                 }
                 
 
-                <TouchableOpacity>
-                    <AntDesign name="forward" size={40} color="#3ea0c7" />
-                </TouchableOpacity>
-                
-                
+                {/* <Video source={route.params.paramKey.url} audioOnly paused={pause}/> */}
                 
             </View>
             <Text style={globalStyles.playerText}> { route.params.paramKey.title }</Text>
