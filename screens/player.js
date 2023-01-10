@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Text, View, TouchableOpacity, Image} from 'react-native';
 
-import Video from 'react-native-video';
+// import TrackPlayer, { State } from 'react-native-track-player';
 
 import { AntDesign } from '@expo/vector-icons';
 import { globalStyles } from '../styles/global';
@@ -15,7 +15,32 @@ export default function Player({ route }){
 
     function togglePlayPauseBtn(){
         setPause(!pause);
+
+        // const togglePlayback = async(usePlaybackState) => {
+        //     if ( playbackState == State.Paused ){
+        //         await TrackPlayer.play();
+        //     } else {
+        //         await TrackPlayer.pause();
+        //     }
+        // }
+        // togglePlayback();
     };
+
+    
+    // const setUpPlayer = async() => {
+    //     await TrackPlayer.setUpPlayer();
+
+    //     await TrackPlayer.add(route.params.paramKey.url);
+    // }
+
+    // const togglePlayback = async(usePlaybackState) => {
+    //     if ( playbackState == State.Paused ){
+    //         await TrackPlayer.play();
+    //     } else {
+    //         await TrackPlayer.pause();
+    //     }
+    // }
+
 
     return(
         <View style={globalStyles.playerContainer}>
@@ -38,7 +63,6 @@ export default function Player({ route }){
                 }
                 
 
-                {/* <Video source={route.params.paramKey.url} audioOnly paused={pause}/> */}
                 
             </View>
             <Text style={globalStyles.playerText}> { route.params.paramKey.title }</Text>
