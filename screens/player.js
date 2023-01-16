@@ -52,12 +52,12 @@ export default function Player({ route }){
                 
                 {pause ? (
                     <TouchableOpacity onPress={togglePlayPauseBtn}>
-                        <AntDesign name="play" size={40} color="#3ea0c7" />
+                        <AntDesign name="play" size={80} color="#3ea0c7" />
                     </TouchableOpacity>
                 ) :
                 (
                     <TouchableOpacity onPress={togglePlayPauseBtn}>
-                        <AntDesign name="pausecircle" size={40} color="#3ea0c7" />
+                        <AntDesign name="pausecircle" size={80} color="#3ea0c7" />
                     </TouchableOpacity>
                 )
                 }
