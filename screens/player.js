@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Text, View, TouchableOpacity, Image} from 'react-native';
 
-// import TrackPlayer, { State } from 'react-native-track-player';
+import { Audio } from 'expo-av';
 
 import { AntDesign } from '@expo/vector-icons';
 import { globalStyles } from '../styles/global';
@@ -12,34 +12,72 @@ import wavyBottom from '../assets/wavyLines-bottom.png';
 export default function Player({ route }){
 
     const [pause, setPause] = useState(false);
+    const [Loaded, SetLoaded] = React.useState(false);
+    const [Loading, SetLoading] = React.useState(false);
+    
+    const meditation = route.params.paramKey.url;
+    
+              
+    React.useEffect(() => {
+        LoadAudio();
+      }, []);
 
     function togglePlayPauseBtn(){
         setPause(!pause);
 
-        // const togglePlayback = async(usePlaybackState) => {
-        //     if ( playbackState == State.Paused ){
-        //         await TrackPlayer.play();
-        //     } else {
-        //         await TrackPlayer.pause();
-        //     }
-        // }
-        // togglePlayback();
+        if(!PlayAudio){
+            PlayAudio;
+        } else {
+            PauseAudio;
+        }
     };
 
+    const PlayAudio = async () => {
+        try {
+          const result = await sound.current.getStatusAsync();
+          if (result.isLoaded) {
+            if (result.isPlaying === false) {
+              sound.current.playAsync();
+              console.log("I'm playing")
+            }
+          }
+        } catch (error) {}
+      };
     
-    // const setUpPlayer = async() => {
-    //     await TrackPlayer.setUpPlayer();
+      const PauseAudio = async () => {
+        try {
+          const result = await sound.current.getStatusAsync();
+          if (result.isLoaded) {
+            if (result.isPlaying === true) {
+              sound.current.pauseAsync();
+              console.log("I'm pausing")
+            }
+          }
+        } catch (error) {}
+      };
 
-    //     await TrackPlayer.add(route.params.paramKey.url);
-    // }
+    const LoadAudio = async () => {
+        SetLoading(true);
+        const checkLoading = await sound.current.getStatusAsync();
+        if (checkLoading.isLoaded === false) {
+          try {
+            const result = await sound.current.loadAsync(meditation, {}, true);
+            if (result.isLoaded === false) {
+              SetLoading(false);
+              console.log('Error in Loading Audio');
+            } else {
+              SetLoading(false);
+              SetLoaded(true);
+            }
+          } catch (error) {
+            console.log(error);
+            SetLoading(false);
+          }
+        } else {
+          SetLoading(false);
+        }
+      };
 
-    // const togglePlayback = async(usePlaybackState) => {
-    //     if ( playbackState == State.Paused ){
-    //         await TrackPlayer.play();
-    //     } else {
-    //         await TrackPlayer.pause();
-    //     }
-    // }
 
 
     return(
