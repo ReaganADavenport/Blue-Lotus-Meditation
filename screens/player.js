@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Text, View, TouchableOpacity, Image} from 'react-native';
 
-import { Audio } from 'expo-av';
+import Sound from 'react-native-sound';
 
 import { AntDesign } from '@expo/vector-icons';
 import { globalStyles } from '../styles/global';
@@ -12,71 +12,31 @@ import wavyBottom from '../assets/wavyLines-bottom.png';
 export default function Player({ route }){
 
     const [pause, setPause] = useState(false);
-    const [Loaded, SetLoaded] = React.useState(false);
-    const [Loading, SetLoading] = React.useState(false);
+    // var Sound = require('react-native-sound');
+   
     
     const meditation = route.params.paramKey.url;
-    
-              
-    React.useEffect(() => {
-        LoadAudio();
-      }, []);
 
+    Sound.setCategory('Playback');
+
+    const om = new Sound(meditation, Sound.MAIN_BUNDLE, (error) => {
+        if(error){
+            console.log('failed to load sound'.error);
+            return;
+        }
+    })
+    
+            
     function togglePlayPauseBtn(){
         setPause(!pause);
-
-        if(!PlayAudio){
-            PlayAudio;
-        } else {
-            PauseAudio;
+        if(om.isPlaying){
+            om.pause();
+        } else{
+            om.play();
         }
     };
 
-    const PlayAudio = async () => {
-        try {
-          const result = await sound.current.getStatusAsync();
-          if (result.isLoaded) {
-            if (result.isPlaying === false) {
-              sound.current.playAsync();
-              console.log("I'm playing")
-            }
-          }
-        } catch (error) {}
-      };
-    
-      const PauseAudio = async () => {
-        try {
-          const result = await sound.current.getStatusAsync();
-          if (result.isLoaded) {
-            if (result.isPlaying === true) {
-              sound.current.pauseAsync();
-              console.log("I'm pausing")
-            }
-          }
-        } catch (error) {}
-      };
-
-    const LoadAudio = async () => {
-        SetLoading(true);
-        const checkLoading = await sound.current.getStatusAsync();
-        if (checkLoading.isLoaded === false) {
-          try {
-            const result = await sound.current.loadAsync(meditation, {}, true);
-            if (result.isLoaded === false) {
-              SetLoading(false);
-              console.log('Error in Loading Audio');
-            } else {
-              SetLoading(false);
-              SetLoaded(true);
-            }
-          } catch (error) {
-            console.log(error);
-            SetLoading(false);
-          }
-        } else {
-          SetLoading(false);
-        }
-      };
+   
 
 
 
