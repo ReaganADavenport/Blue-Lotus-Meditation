@@ -13,11 +13,12 @@
     "@react-navigation/native-stack": "^6.9.7",
     "expo": "~47.0.8",
     "expo-app-loading": "^2.1.1",
+    "expo-audio-hooks": "^1.0.3",
+    "expo-av": "^13.0.2",
     "expo-status-bar": "~1.4.2",
     "react": "18.1.0",
     "react-native": "0.70.5",
-    "react-native-screens": "^3.18.2",
-    "react-native-sound": "^0.11.2"
+    "react-native-screens": "^3.18.2"
   },
   "devDependencies": {
     "@babel/core": "^7.12.9"
